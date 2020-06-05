@@ -90,6 +90,7 @@ ul {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    position: relative;
 }
 .main-navigation:hover,
 .main-navigation:focus {
@@ -100,6 +101,16 @@ ul {
 }
 .active {
     color: var(--accent-text-color);
+}
+.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #2196F3;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
 }
 .contact-navigation {
     color: var(--secondary-text-color);
@@ -255,6 +266,13 @@ h1 {
 }
 .goals li+li {
     margin-left: 30px;
+}
+.small-container {
+    position: relative;
+}
+.small-container p {
+    position: absolute;
+    bottom: 0;
 }
 /*------------------------------------Наша команда, наши клиенты-------------------------------------*/
 .third-section, .clients {
